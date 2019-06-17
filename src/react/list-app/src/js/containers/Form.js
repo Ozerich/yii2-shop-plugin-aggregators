@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { init } from "../ducks/form";
 import BlockOrLoader from "../components/ui/BlockOrLoader";
 import { Formik } from "formik";
 import FilterFormView from "../components/filter/FilterFormView";
+
+import { init } from "../ducks/form";
+import { loadProducts } from "../ducks/list";
 
 class Form extends Component {
   componentWillMount() {
@@ -20,7 +22,7 @@ class Form extends Component {
         <div className="box box-primary">
           <div className="box-body">
             <BlockOrLoader loading={this.props.loading}>
-              <Formik onSubmit={this.onSubmit.bind(this)}>
+              <Formik>
                 {({ values, handleChange, handleSubmit }) => (
                     <form onSubmit={handleSubmit}>
                       <FilterFormView values={values} handleChange={handleChange} />
@@ -30,14 +32,14 @@ class Form extends Component {
             </BlockOrLoader>
           </div>
           {section && manufacture ? <div className="box-footer">
-            <button className="btn btn-success">Показать</button>
+            <button className="btn btn-success" onClick={this.onSubmit.bind(this)}>Показать</button>
           </div> : null}
         </div>
     );
   }
 
   onSubmit(values) {
-    console.log(values)
+    this.props.loadProducts(this.props.section, this.props.manufacture);
   }
 }
 
@@ -49,4 +51,4 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps, { init })(Form);
+export default connect(mapStateToProps, { init, loadProducts })(Form);

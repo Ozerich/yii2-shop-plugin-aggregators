@@ -25,6 +25,7 @@
 
   &__action {
     margin-right: 5px;
+
     &:last-child {
       margin-right: 0;
     }
@@ -37,6 +38,7 @@
 
     &--edit {
       background: #86a4c7;
+
       &:hover {
         background: darken(#86a4c7, 10%);
       }
@@ -44,6 +46,7 @@
 
     &--delete {
       background: #dd777b;
+
       &:hover {
         background: darken(#dd777b, 10%);
       }
@@ -53,6 +56,7 @@
 
 .form {
   margin: 20px 0;
+
   &-actions {
     display: flex;
     justify-content: space-between;
@@ -153,6 +157,7 @@
 
 .loader-wrapper.loading {
   position: relative;
+
   &:before {
     position: absolute;
     content: '';
@@ -165,7 +170,7 @@
   }
 }
 
-.list table {
+table {
   width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
@@ -173,6 +178,7 @@
 
   td, th {
     padding: 5px 10px;
+    border: 1px solid #eee;
   }
 
   th {
@@ -180,16 +186,7 @@
     padding-top: 15px;
   }
 
-  tbody tr:last-child {
-    td {
-      padding-bottom: 0;
-      .form-group {
-        margin-bottom: 0;
-      }
-    }
-  }
-
-  .cell-filter {
+  .cell-onliner {
     width: 300px;
   }
 
@@ -201,6 +198,7 @@
     width: 50px;
     vertical-align: top;
     text-align: right;
+
     a {
       display: inline-block;
       margin-top: 10px;
@@ -216,4 +214,50 @@
   padding-bottom: 15px;
   text-align: center;
   margin: 0 -10px;
+}
+
+.item-search {
+  position: relative;
+
+  &__input {
+    border: 1px solid #eee;
+    padding: 5px 10px;
+    display: block;
+    width: 100%;
+  }
+
+  &__dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    z-index: 11;
+    border: 2px solid #eee;
+    box-shadow: 0 0 10px #eee;
+    border-top: 0 none;
+
+    max-height: 300px;
+    overflow: auto;
+
+    &-item {
+      padding: 10px 10px;
+      border-bottom: 1px solid #eee;
+      cursor: pointer;
+
+      &:hover {
+        background: #eee;
+      }
+    }
+  }
+}
+
+.list-row__selected {
+  padding: 5px;
+
+  a {
+    color: red;
+    display: inline-block;
+    margin-left: 20px;
+  }
 }

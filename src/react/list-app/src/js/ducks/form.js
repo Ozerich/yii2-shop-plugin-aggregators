@@ -20,8 +20,8 @@ const initialState = {
   loadingManufactures: false,
   manufactures: [],
 
-  section: null,
-  manufacture: null
+  section: 149,
+  manufacture: 371
 };
 
 export default function reducer(state = initialState, action = {}) {

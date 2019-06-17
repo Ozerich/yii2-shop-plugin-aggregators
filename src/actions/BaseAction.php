@@ -18,6 +18,14 @@ class BaseAction extends Action
     }
 
     /**
+     * @return OnlinerService
+     */
+    protected function service()
+    {
+        return (new OnlinerService());
+    }
+
+    /**
      * @return \ozerich\shop\plugins\onliner\sdk\Onliner
      */
     protected function onliner()
