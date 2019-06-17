@@ -15,7 +15,7 @@ const reject = err => {
 };
 
 export default class BaseService {
-  query(url, queryParams) {
+  query(url) {
     return api.get(url).then(resolve).catch(reject);
   }
 

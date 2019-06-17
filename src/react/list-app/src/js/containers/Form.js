@@ -14,6 +14,8 @@ class Form extends Component {
   }
 
   render() {
+    const { section, manufacture } = this.props;
+
     return (
         <div className="box box-primary">
           <div className="box-body">
@@ -27,6 +29,9 @@ class Form extends Component {
               </Formik>
             </BlockOrLoader>
           </div>
+          {section && manufacture ? <div className="box-footer">
+            <button className="btn btn-success">Показать</button>
+          </div> : null}
         </div>
     );
   }
@@ -38,7 +43,9 @@ class Form extends Component {
 
 function mapStateToProps(state) {
   return {
-    loading: state.form.loading
+    loading: state.form.loading,
+    section: state.form.section,
+    manufacture: state.form.manufacture,
   }
 }
 

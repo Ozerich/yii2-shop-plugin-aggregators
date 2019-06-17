@@ -6,11 +6,11 @@ export default class OnlinerService extends BaseService {
   }
 
   manufactures(section) {
-    return this.query('/manufactures', { section });
+    return this.query('/manufactures?section=' + section);
   }
 
   products(section, manufacture) {
-    return this.query('/products', { section, manufacture });
+    return this.query('/products?section=' + section + '&manufacture=' + manufacture);
   }
 }
 

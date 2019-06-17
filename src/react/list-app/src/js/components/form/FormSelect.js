@@ -27,12 +27,12 @@ class FormSelect extends Component {
   }
 
   render() {
-    const { id, value, name, multiple, label } = this.props;
+    const { id, value, name, multiple, label, handleChange } = this.props;
 
     return (
         <div className="form-group">
           <label className="control-label" htmlFor={id}>{label}</label>
-          <select className="form-control" name={name || id} onChange={this.onChange.bind(this)} multiple={multiple}>
+          <select className="form-control" name={name || id} onChange={handleChange} multiple={multiple}>
             {this.getItems().map(item => {
               const selected = Array.isArray(value) ? value.indexOf(item.id) !== -1 : item.id === value;
               return <option key={item.id} value={item.id} selected={selected}>{item.label}</option>
@@ -40,12 +40,6 @@ class FormSelect extends Component {
           </select>
         </div>
     );
-  }
-
-  onChange(e) {
-    if (this.props.onChange) {
-      this.props.onChange(this.props.multiple ? getSelectValues(e.target) : e.target.value);
-    }
   }
 }
 
