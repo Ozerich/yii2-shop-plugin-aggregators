@@ -2,6 +2,8 @@
 
 namespace ozerich\shop\plugins\onliner\sdk;
 
+use ozerich\shop\plugins\onliner\sdk\models\Manufacture;
+use ozerich\shop\plugins\onliner\sdk\models\Product;
 use ozerich\shop\plugins\onliner\sdk\models\Section;
 
 class Onliner
@@ -52,6 +54,9 @@ class Onliner
         return $this->httpClient->getRequest($url, 'Bearer ' . $this->accessToken);
     }
 
+    /**
+     * @return Section[]
+     */
     public function sections()
     {
         $this->checkAuth();
@@ -61,6 +66,49 @@ class Onliner
         $response = $this->getRequest('/sections');
         foreach ($response as $id => $name) {
             $item = new Section();
+            $item->setId($id);
+            $item->setName($name);
+            $result[] = $item;
+        }
+
+        return $result;
+    }
+
+    /**
+     * @param $sectionId
+     * @return Manufacture[]
+     */
+    public function manufactures($sectionId)
+    {
+        $this->checkAuth();
+
+        $result = [];
+
+        $response = $this->getRequest('/sections/' . $sectionId . '/manufactures');
+        foreach ($response as $id => $name) {
+            $item = new Manufacture();
+            $item->setId($id);
+            $item->setName($name);
+            $result[] = $item;
+        }
+
+        return $result;
+    }
+
+    /**
+     * @param $sectionId
+     * @param $manufactureId
+     * @return Manufacture[]
+     */
+    public function products($sectionId, $manufactureId)
+    {
+        $this->checkAuth();
+
+        $result = [];
+
+        $response = $this->getRequest('/sections/' . $sectionId . '/manufactures/' . $manufactureId . '/products');
+        foreach ($response as $id => $name) {
+            $item = new Product();
             $item->setId($id);
             $item->setName($name);
             $result[] = $item;

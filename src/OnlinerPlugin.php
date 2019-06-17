@@ -2,8 +2,10 @@
 
 namespace ozerich\shop\plugins\onliner;
 
-use ozerich\shop\plugins\onliner\actions\SectionsAction;
 use ozerich\shop\plugins\BasePlugin;
+use ozerich\shop\plugins\onliner\actions\ManufacturesAction;
+use ozerich\shop\plugins\onliner\actions\ProductsAction;
+use ozerich\shop\plugins\onliner\actions\SectionsAction;
 
 class OnlinerPlugin extends BasePlugin
 {
@@ -17,8 +19,8 @@ class OnlinerPlugin extends BasePlugin
         $this->registerProductTab(new ProductTab());
 
         $this->registerAction('sections', SectionsAction::class);
-        $this->registerAction('manufactures', SectionsAction::class);
-        $this->registerAction('products', SectionsAction::class);
+        $this->registerAction('manufactures', ManufacturesAction::class);
+        $this->registerAction('products', ProductsAction::class);
 
         $this->registerPage('settings', new SettingsPage());
     }

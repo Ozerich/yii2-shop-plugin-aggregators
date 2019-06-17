@@ -4,7 +4,7 @@ namespace ozerich\shop\plugins\onliner\actions;
 
 use ozerich\shop\plugins\onliner\sdk\models\Section;
 
-class SectionsAction extends BaseAction
+class ProductsAction extends BaseAction
 {
     public function runWithParams($params)
     {
