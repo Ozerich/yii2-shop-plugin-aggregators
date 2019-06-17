@@ -3,17 +3,19 @@ import { connect } from 'react-redux';
 
 import BlockOrLoader from '../components/ui/BlockOrLoader';
 
-import Service from '../services/common';
+import { init } from "../ducks/common";
 
-const service = new Service;
-service.test();
 
 class App extends Component {
   componentWillMount() {
-    const { init, categoryId } = this.props;
+    const { init, productId } = this.props;
+
+    init();
   }
 
   render() {
+    console.log(this.props.sections);
+
     return (
         <BlockOrLoader loading={this.props.loading}>
 
@@ -23,7 +25,10 @@ class App extends Component {
 }
 
 function mapStateToProps(state) {
-  return { loading: true }
+  return {
+    loading: state.common.loading,
+    sections: state.common.sections
+  }
 }
 
-export default connect(mapStateToProps, {  })(App);
+export default connect(mapStateToProps, { init })(App);

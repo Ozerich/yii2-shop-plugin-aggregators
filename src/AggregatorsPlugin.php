@@ -2,7 +2,7 @@
 
 namespace ozerich\shop\plugins\aggregators;
 
-use ozerich\shop\plugins\aggregators\actions\TestAction;
+use ozerich\shop\plugins\aggregators\actions\SectionsAction;
 use ozerich\shop\plugins\BasePlugin;
 
 class AggregatorsPlugin extends BasePlugin
@@ -16,7 +16,7 @@ class AggregatorsPlugin extends BasePlugin
     {
         $this->registerProductTab(new ProductTab());
 
-        $this->registerAction('test', TestAction::class);
+        $this->registerAction('sections', SectionsAction::class);
 
         $this->registerPage('settings', new SettingsPage());
     }
