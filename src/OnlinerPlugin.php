@@ -22,6 +22,7 @@ class OnlinerPlugin extends BasePlugin
         $this->registerAction('manufactures', ManufacturesAction::class);
         $this->registerAction('products', ProductsAction::class);
 
+        $this->registerPage('list', new ListPage());
         $this->registerPage('settings', new SettingsPage());
     }
 }

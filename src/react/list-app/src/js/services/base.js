@@ -5,7 +5,7 @@ const axios = require('axios');
 const source = axios.CancelToken.source();
 
 const api = axios.create({
-  baseURL: document.location.href.indexOf('localhost') === -1 ? '/admin/plugin/aggregators' : 'http://belmebel.local/admin/plugin/onliner',
+  baseURL: document.location.href.indexOf('localhost') === -1 ? '/admin/plugin/onliner' : 'http://belmebel.local/admin/plugin/onliner',
   cancelToken: source.token
 });
 
@@ -15,7 +15,7 @@ const reject = err => {
 };
 
 export default class BaseService {
-  query(url) {
+  query(url, queryParams) {
     return api.get(url).then(resolve).catch(reject);
   }
 

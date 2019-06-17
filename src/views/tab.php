@@ -2,7 +2,7 @@
  * @var \ozerich\shop\models\Product $model
  */
 
-\ozerich\shop\plugins\onliner\TabAppAsset::register($this);
+\ozerich\shop\plugins\onliner\react\TabAppAsset::register($this);
 ?>
 
-<div id="react-app-tab-onliner" data-product-id="<?= $model->id ?>"></div>
+<div id="react-app-tab" data-product-id="<?= $model->id ?>"></div>

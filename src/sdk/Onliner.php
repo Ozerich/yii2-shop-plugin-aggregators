@@ -84,7 +84,7 @@ class Onliner
 
         $result = [];
 
-        $response = $this->getRequest('/sections/' . $sectionId . '/manufactures');
+        $response = $this->getRequest('/sections/' . $sectionId . '/manufacturers');
         foreach ($response as $id => $name) {
             $item = new Manufacture();
             $item->setId($id);
@@ -106,7 +106,7 @@ class Onliner
 
         $result = [];
 
-        $response = $this->getRequest('/sections/' . $sectionId . '/manufactures/' . $manufactureId . '/products');
+        $response = $this->getRequest('/sections/' . $sectionId . '/manufacturers/' . $manufactureId . '/products');
         foreach ($response as $id => $name) {
             $item = new Product();
             $item->setId($id);

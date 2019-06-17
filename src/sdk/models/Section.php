@@ -32,7 +32,7 @@ class Section
     {
         return [
             'id' => $this->id,
-            'name' => $this->name
+            'label' => $this->name
         ];
     }
 }

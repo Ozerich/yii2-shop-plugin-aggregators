@@ -1,12 +1,12 @@
 <?php
 
-namespace ozerich\shop\plugins\onliner;
+namespace ozerich\shop\plugins\onliner\react;
 
 use yii\web\AssetBundle;
 
 class TabAppAsset extends AssetBundle
 {
-    public $sourcePath = '@vendor/ozerich/yii2-shop-plugin-onlinerby/src/tab-app/build';
+    public $sourcePath = '@vendor/ozerich/yii2-shop-plugin-onlinerby/src/react/tab-app/build';
 
     public $js = [
         'build.js',
