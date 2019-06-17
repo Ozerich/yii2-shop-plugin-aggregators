@@ -1,8 +1,8 @@
 <?php
 
-namespace ozerich\shop\plugins\aggregators\sdk\onliner;
+namespace ozerich\shop\plugins\onliner\sdk;
 
-use ozerich\shop\plugins\aggregators\sdk\onliner\models\Section;
+use ozerich\shop\plugins\onliner\sdk\models\Section;
 
 class Onliner
 {

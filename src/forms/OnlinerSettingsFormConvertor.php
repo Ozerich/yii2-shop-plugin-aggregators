@@ -1,8 +1,8 @@
 <?php
 
-namespace ozerich\shop\plugins\aggregators\forms;
+namespace ozerich\shop\plugins\onliner\forms;
 
-use ozerich\shop\plugins\aggregators\constants\SettingOption;
+use ozerich\shop\plugins\onliner\constants\SettingOption;
 use ozerich\shop\constants\SettingValueType;
 use ozerich\shop\traits\ServicesTrait;
 

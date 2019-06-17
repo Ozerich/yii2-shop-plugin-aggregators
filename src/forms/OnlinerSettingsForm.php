@@ -1,6 +1,6 @@
 <?php
 
-namespace ozerich\shop\plugins\aggregators\forms;
+namespace ozerich\shop\plugins\onliner\forms;
 
 use yii\base\Model;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace ozerich\shop\plugins\aggregators\sdk\onliner;
+namespace ozerich\shop\plugins\onliner\sdk;
 
 class HttpClient
 {

@@ -1,10 +1,10 @@
 <?php
 
-namespace ozerich\shop\plugins\aggregators\actions;
+namespace ozerich\shop\plugins\onliner\actions;
 
-use ozerich\shop\plugins\aggregators\constants\SettingOption;
-use ozerich\shop\plugins\aggregators\sdk\onliner\models\Section;
-use ozerich\shop\plugins\aggregators\sdk\onliner\Onliner;
+use ozerich\shop\plugins\onliner\constants\SettingOption;
+use ozerich\shop\plugins\onliner\sdk\models\Section;
+use ozerich\shop\plugins\onliner\sdk\Onliner;
 use ozerich\shop\traits\ServicesTrait;
 use yii\base\Action;
 use yii\web\Response;

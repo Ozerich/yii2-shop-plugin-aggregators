@@ -1,6 +1,6 @@
 <?php
 
-namespace ozerich\shop\plugins\aggregators\sdk\onliner\models;
+namespace ozerich\shop\plugins\onliner\sdk\models;
 
 class Section
 {

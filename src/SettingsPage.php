@@ -1,8 +1,8 @@
 <?php
 
-namespace ozerich\shop\plugins\aggregators;
+namespace ozerich\shop\plugins\onliner;
 
-use ozerich\shop\plugins\aggregators\forms\OnlinerSettingsFormConvertor;
+use ozerich\shop\plugins\onliner\forms\OnlinerSettingsFormConvertor;
 use ozerich\shop\plugins\IPage;
 use yii\web\Response;
 use yii\widgets\ActiveForm;
@@ -11,7 +11,7 @@ class SettingsPage implements IPage
 {
     public function pageTitle()
     {
-        return 'Настройки агрегаторов';
+        return 'Настройки Onliner.Каталог';
     }
 
     public function menuParent()
@@ -21,7 +21,7 @@ class SettingsPage implements IPage
 
     public function menuLabel()
     {
-        return 'Настройки агрегаторов';
+        return 'Настройки Onliner.Каталог';
     }
 
     public function render()
@@ -44,7 +44,7 @@ class SettingsPage implements IPage
             return \Yii::$app->controller->redirect(\Yii::$app->request->referrer);
         }
 
-        return $view->render('@vendor/ozerich/yii2-shop-plugin-aggregators/src/views/settings.php', [
+        return $view->render('@vendor/ozerich/yii2-shop-plugin-onlinerby/src/views/settings.php', [
             'formModel' => $form
         ]);
     }

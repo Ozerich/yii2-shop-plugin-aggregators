@@ -1,6 +1,6 @@
 <?php
 
-namespace ozerich\shop\plugins\aggregators\constants;
+namespace ozerich\shop\plugins\onliner\constants;
 
 use MyCLabs\Enum\Enum;
 

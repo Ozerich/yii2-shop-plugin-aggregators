@@ -1,4 +1,4 @@
-<? /** @var \ozerich\shop\plugins\aggregators\forms\OnlinerSettingsForm $formModel */ ?>
+<? /** @var \ozerich\shop\plugins\onliner\forms\OnlinerSettingsForm $formModel */ ?>
 
 <?php $form = \yii\widgets\ActiveForm::begin([
     'enableClientValidation' => false,

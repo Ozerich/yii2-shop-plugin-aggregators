@@ -5,7 +5,7 @@ const axios = require('axios');
 const source = axios.CancelToken.source();
 
 const api = axios.create({
-  baseURL: document.location.href.indexOf('localhost') === -1 ? '/admin/plugin/aggregators' : 'http://belmebel.local/admin/plugin/aggregators',
+  baseURL: document.location.href.indexOf('localhost') === -1 ? '/admin/plugin/aggregators' : 'http://belmebel.local/admin/plugin/onliner',
   cancelToken: source.token
 });
 

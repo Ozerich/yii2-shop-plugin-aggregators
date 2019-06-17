@@ -1,6 +1,6 @@
 <?php
 
-namespace ozerich\shop\plugins\aggregators\migrations;
+namespace ozerich\shop\plugins\onliner\migrations;
 
 use yii\db\Migration;
 

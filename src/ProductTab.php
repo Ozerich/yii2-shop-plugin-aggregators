@@ -1,6 +1,6 @@
 <?php
 
-namespace ozerich\shop\plugins\aggregators;
+namespace ozerich\shop\plugins\onliner;
 
 use ozerich\shop\models\Product;
 use ozerich\shop\plugins\IProductTab;
@@ -9,7 +9,7 @@ class ProductTab implements IProductTab
 {
     public function tabLabel()
     {
-        return 'Агрегаторы';
+        return 'Каталог Onliner';
     }
 
     public function isTabVisible(Product $product)
@@ -21,6 +21,6 @@ class ProductTab implements IProductTab
     {
         $view = \Yii::$app->controller->view;
 
-        return $view->render('@vendor/ozerich/yii2-shop-plugin-aggregators/src/views/tab.php', ['model' => $product]);
+        return $view->render('@vendor/ozerich/yii2-shop-plugin-onlinerby/src/views/tab.php', ['model' => $product]);
     }
 }
