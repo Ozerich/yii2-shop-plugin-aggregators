@@ -1,6 +1,6 @@
 {
   "name": "ozerich/yii2-shop-plugin-onlinerby",
-  "description": "Onliner.by and dom.by aggregations",
+  "description": "Onliner.by integration",
   "type": "yii2-extension",
   "license": "proprietary",
   "authors": [

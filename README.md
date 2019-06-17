@@ -1,1 +1,1 @@
-# yii2-shop-plugin-aggregators
+# yii2-shop-plugin-onlinerby
