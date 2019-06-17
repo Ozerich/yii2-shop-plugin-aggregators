@@ -1,0 +1,23 @@
+{
+  "name": "ozerich/yii2-shop-plugin-aggregators",
+  "description": "Onliner.by and dom.by aggregations",
+  "type": "yii2-extension",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Vital Ozierski",
+      "email": "vital@ozerich.com",
+      "homepage": "https://ozerich.me",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=7.0.0",
+    "yiisoft/yii2": "^2.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "ozerich\\shop\\plugins\\aggregators\\": "src/"
+    }
+  }
+}

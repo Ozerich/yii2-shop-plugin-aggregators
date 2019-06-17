@@ -1,0 +1,9 @@
+{
+  "main.css": "/build.css",
+  "main.js": "/build.js",
+  "main.js.map": "/build.js.map",
+  "build.css.map": "/build.css.map",
+  "index.html": "/index.html",
+  "precache-manifest.a78e5d640cf9d1f8401c2c34d1a986af.js": "/precache-manifest.a78e5d640cf9d1f8401c2c34d1a986af.js",
+  "service-worker.js": "/service-worker.js"
+}
